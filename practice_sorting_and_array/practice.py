@@ -25,7 +25,6 @@ sle()
 def removeDuplicates(self, nums: List[int]) -> int:
     ele = nums[0]
     i = 1
-    p = 1
     k = 1
     while (i < len(nums)):
         if nums[i] != ele:
