@@ -58,6 +58,23 @@ def rotate(nums, k) -> None:
 
 rotate([1, 2, 3, 4, 5])
 
+# Move zero to end
 
+def moveZeroes(nums) -> None:
+    """
+    Do not return anything, modify nums in-place instead.
+    """
+    i = 0
+    p = 0
+    while (i < len(nums)):
+        if nums[i] != 0:
+            nums[i], nums[p] = nums[p], nums[i]
+            p += 1
+        i += 1
+    while (p < len(nums)):
+        nums[p] = 0
+        p += 1
+    return nums
 
+moveZeroes([0,1,0,3,12])
 
