@@ -20,3 +20,17 @@ def sle():
         print("no second largest element available")
 
 sle()
+
+# Remove duplicate element in O(n)
+def removeDuplicates(self, nums: List[int]) -> int:
+    ele = nums[0]
+    i = 1
+    p = 1
+    k = 1
+    while (i < len(nums)):
+        if nums[i] != ele:
+            nums[k] = ele = nums[i]
+
+            k += 1
+        i += 1
+    return k
