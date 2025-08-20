@@ -33,3 +33,31 @@ def removeDuplicates(self, nums: List[int]) -> int:
             k += 1
         i += 1
     return k
+
+# rotate array
+def reverse(nums, s, e):
+    while (s < e):
+        nums[s], nums[e] = nums[e], nums[s]
+        s += 1
+        e -= 1
+    return nums
+
+
+def rotate(nums, k) -> None:
+    """
+    Do not return anything, modify nums in-place instead.
+    """
+    n = len(nums)
+    k = k % n
+
+    reverse(nums, 0, n - k - 1)
+    reverse(nums, n - k, n - 1)
+    reverse(nums, 0, n - 1)
+    return nums
+
+
+rotate([1, 2, 3, 4, 5])
+
+
+
+
